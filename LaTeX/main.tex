@@ -52,7 +52,7 @@ pdfkeywords={Quantum Machine Learning, Variational Quantum Circuit, Gradient Des
 
 \begin{abstract}
     
-    It is hard to calculate the gradient for Variational Quantum Circuit (VQC) with classical differentiation method. Especially in NISQ era, the noise of gates or measurements will cause a huge error on classical differentiation method. We use Parameter-Shift Rule (PSR) proposed by \citet{1905.13311} to calculate the gradient in a more quantum-efficient way. 
+    It is hard to calculate the gradient for Variational Quantum Circuit (VQC) with classical differentiation method. Especially in NISQ era, the noise of gates or measurements will cause a huge error on classical differentiation method. We use Parameter-Shift Rule (PSR) proposed by \citet{1905.13311} to calculate the gradient in a more quantum-efficient way. The code can be found at \url{https://github.com/r08222011/Qiskit\_Parameter\_Shift}
     
 \end{abstract}
 
@@ -167,6 +167,8 @@ Training results for shots 128 and shots 1024 can be found in Fig.\ref{s128} and
 PSR is certainly a candidate for training a VQC, however, the (time and space) complexity should be discussed. Unlike the classical method such as back propagation, we can only calculate the gradient for a parameter at a time, which means the training time complexity is polynomial in the number of parameters. Also, to use PSR technique, one should obey the special structure of gates we use, such as Pauli rotation gates. The greatest advantage of PSR is that we calculate the gradient by shifting the parameters by $\pi/2$, unlike finite difference method, this is exact a value!
 
 There are other techniques for training VQC such as data re-upload proposed by \citet{reupload}, we also implement this technique in our code. However, due to the restriction of the usage of IBM quantum computers, we didn't use this technique in our experiment.
+
+For details of code, see \url{https://github.com/r08222011/Qiskit\_Parameter\_Shift}.
 
 \bibliographystyle{unsrtnat}
 \bibliography{references}  %%% Uncomment this line and comment out the ``thebibliography'' section below to use the external .bib file (using bibtex) .
