@@ -5,8 +5,8 @@
 This code is mainly contributed by
 - 陳奕安 (Simulation, Theory, Slide & Presentation)
 - 林昆佑 (Simulation, Ideal Model)
-- 矯其臻 (Simulation, Noise Model)
-- 葉宇晟 (Simulation, IBMQ)
+- 矯其臻 (Simulation, Noise Model, IBMQ)
+- 葉宇晟 (Simulation, Ideal Model)
 
 The paper we followed is written by [Gavin E. Crooks : Gradients of parameterized quantum gates using the parameter-shift rule and gate decomposition](https://arxiv.org/abs/1905.13311)
 
